@@ -81,6 +81,44 @@ Recommended hardware:
 
 
 
+<hr>
+<p style="font-family: sans-serif; font-size: 28px; margin-bottom: -20px; font-weight: bold;">HOW TO INSTALL WINDOWS 11 ONTO A PC</p>
+<p style="font-family: sans-serif; font-size: 18px; ">(Even if it doesn't meet the TPM chip requirements)</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">You will need to build a bootable USB stick using another Windows PC.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">You will also require a Windows 7/8/10 or 11 Pro Product Key - It is a 25-character code that is used to activate Windows.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Download Rufus from <a style="color: #aa0000;" href="https://rufus.ie/downloads/" target="_new">https://rufus.ie/downloads/</a>.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Download the Windows 11 Disk Image (ISO) from <a style="color: #aa0000;" href="https://www.microsoft.com/software-download/windows11">https://www.microsoft.com/software-download/windows11</a>.
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Plug the USB stick into an existing/working Windows PC and confirm it's drive letter.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Open Rufus and select the USB stick from 'Devices'.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Under 'Boot Selection' select the Windows 11 ISO file.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Under 'Image option' select Extended Windows 11 Installation (no TPM / no Secure Boot).</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Change the Partition scheme from GPT to MBR, Target System: 'BIOS (or UEFI-CSM)'.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Under advanced drive properties, tick 'Add fixes for old BIOSes (extra partition, align, etc) and also 'Use Rufus MBR with BIOS ID 0x80 (Default).</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">You don't need to change anything under Format Options.  Leave it as NTFS file system, Cluster size 4096 bytes (Default), Quick Format, Create extended label and icon files.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Whilst most hardware should automatically be setup and installed by Windows 11, you may need to provide some Windows 11 compatible Device Drivers - particularly if you are using less common hardware items in your PC.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Click 'START' and wait for the USB stick to be prepared - This will take a while.  Once complete - safely remove the USB stick (From the system tray USB icon).</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">On the PC that you want to install Windows 11 on, you may need to tweak some settings in the System BIOS.  You need to enable boot from USB and set it as the highest priority.  You also need to enable 'Legacy Boot'.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Boot up the PC from the USB stick and follow the prompts to complete the installation.  You will be prompted for the product key and asked a lot of annoying questions, and the computer might reboot several times and say things like 'Getting things ready' and 'Just a moment'.  After a while you should have a working Windows 11 PC.</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">WORTH NOTING: You can only use a particular product key a certain number of times per year.  If you exceed this - Windows will not activate.  Also if you radically change the hardware in the PC after installing Windows - it may deactivate itself.</p>
+<hr>
+
+
 <img src="https://jaseman125.github.io/software/images/amiga-kickstart1.3.png" id="specific-image" class="transparent-image" width="100%">
 <img src="https://jaseman125.github.io/software/images/audacity-screenshot.png" id="specific-image" class="transparent-image" width="100%">
 <img src="https://jaseman125.github.io/software/images/bricklink-studio-screenshot.png" id="specific-image" class="transparent-image" width="100%">
