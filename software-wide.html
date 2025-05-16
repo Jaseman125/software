@@ -172,6 +172,110 @@ Recommended hardware:
 <a target="_new" href="https://www.facebook.com/jason.a.davies"><img src="https://jaseman125.github.io/img/facebook.png" width="4%" border="0"></a>
 <img src="https://jaseman125.github.io/img/1x1whitepixel.png" width="0.2%">
 <a target="_new" href="https://www.youtube.com/@jaseman"><img src="https://jaseman125.github.io/img/youtube.png" width="4%" border="0"></a>
+
+
+
+<p style="font-family: sans-serif; font-size: 28px; font-weight: bold;">MAPPED DRIVE CONVENTION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A: - Z:</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://jaseman125.github.io/software/images/computer-management-screenshot.png" target="_new"><img src="https://jaseman125.github.io/software/images/computer-management-screenshot.png" width="100%"></a>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p style="font-family: sans-serif; font-size: 28px; font-weight: bold; margin-top: 20px; margin-bottom: -20px;">I strongly advise creating 'bitlockered VHDX virtual disks' to store your data.</p>
+<p style="font-family: sans-serif; font-size: 18px;">(This ensures privacy and security.)</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">Click the Start button and type 'Computer Management'.
+<br><br>
+Under Storage, click on 'Disk Management'.
+<br><br>
+From here you can create VHDX files (You can think of them like a passworded zip file that can be mounted as a disk drive).
+<br><br>
+To create a VHDX file choose Action > Create VHD.
+<br><br>
+Change the type from VHD to VHDX and set it to be Dynamically expanding.
+<br><br>
+I generally set the Virtual Hard Disk size to 1 TB, even if you don't need it to be that big.
+<br><br>
+Choose the location for your VHDX file - I always put them on an external SSD drive - that way you can unplug the drive if you need to in a hurry, or if you need to wipe your PC, you can just remove that disk and not have to worry about losing anything important.
+<br><br>
+The new Disk will be listed within Disk Management and it will say 'Not Initialised' and 'Unallocated'.
+<br><br>
+Right-click on it and choose 'Initialize Disk'.
+<br><br>
+Choose GPT (GUID Partition Table) and press OK.
+<br><br>
+It will now change from 'Not initialised' to 'Online'.
+<br><br>
+In the area where it says 'Unallocated' right-click and choose 'New Simple Volume'.
+<br><br>
+Click Next> accepting the default size (Maximum).
+<br><br>
+You can assign a drive letter (See below for my standard for drive letters).
+<br><br>
+Quick format it in NTFS file system, giving it a meaningful label.
+<br><br>
+The disk will be mounted to the drive letter you chose.
+<br><br>
+In file explorer, right-click on the mounted disk and select 'Turn bitlocker on' and tick the option to 'Use a password to unlock the drive.
+<br><br>
+Choose a password that is not easy to guess and one you won't forget.
+<br><br>
+You will be prompted to back up your recovery key - There is no skipping this stage.
+<br><br>
+Click Save to a file and save it in your Windows Documents folder.
+<br><br>
+Click Next and choose 'Encrypt used disk space only' and Next again.
+<br><br>
+Choose 'New encryption mode'.
+<br><br>
+Click Next and then 'Start encypting'.
+<br><br>
+It should encrypt very quickly since there are no files on the disk yet.
+<br><br>
+Right-click on the drive letter in File Explorer and choose 'Eject'.
+<br><br>
+Find the vhdx file on your external drive and double-click on it.
+<br><br>
+You 'should' be prompted to Unlock the drive using the password.
+<br><br>
+If this prompt vanishes, you have to go to Control Panel and into Bitlocker Drive Encryption.
+<br><br>
+From there you should get the option to unlock the drive and the prompt for the password will return.
+<br><br>
+Every time you power off the PC, the VHDX will be unmounted.
+<br><br>
+This is good, because if someone turns on your PC when you are not around - they cannot access your data even if they get past the login.
+</p>
+
+<center><img src="https://jaseman125.github.io/software/images/mapped-drives.png" width="100%"></center>
+
+<p style="font-family: sans-serif; font-size: 28px; font-weight: bold; margin-top: 20px;">Physical Disk Drives:</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">
+A = Floppy Drives / Card Readers Etc<br>
+B = External USB Backup Drives / Sticks / SSDs / HDDs (Temporarily Connected)<br>
+C = Primary Boot Drive / System Disk<br>
+D = Secondary Internal Drive (Extra Space for Large Software Installs)<br>
+E = DVD RW Drive<br>
+F = Primary External Storage Drive - Hosting Bitlocker Encrypted VHDX Disks<br>
+G = Third Internal Drive (Temporary Storage Area)</p>
+
+<p style="font-family: sans-serif; font-size: 28px; font-weight: bold; margin-top: 20px;">VHDX drives with Bitlocker Encryption:</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">
+P = Private (archive, books, contacts, documents, home-movies, movies, music, pictures, software, tv-shows)<br>
+S = Shared (car-music, lego, photo-album, pictures, podcast, software)<br>
+W = Cloud Folders (Dropbox, OneDrive, etc)<br>
+X = Videos (Private)<br>
+Y = Virtual Machine System Disk (Hyper-V, Oracle Virtual Box or VMWare)<br>
+Z = Virtual Machine Data Disk (Hyper-V, Oracle Virtual Box or VMWare)</p>
+
+
+
 </td>
 
 
