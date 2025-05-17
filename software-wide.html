@@ -116,8 +116,28 @@ Recommended hardware:
 <p style="font-family: sans-serif; font-size: 14px; margin-left: 6px; text-align: left;">Boot up the PC from the USB stick and follow the prompts to complete the installation.  You will be prompted for the product key and asked a lot of annoying questions, and the computer might reboot several times and say things like 'Getting things ready' and 'Just a moment'.  After a while you should have a working Windows 11 PC.</p>
 
 <p style="font-family: sans-serif; font-size: 14px; margin-left: 6px; text-align: left;">WORTH NOTING: You can only use a particular product key a certain number of times per year.  If you exceed this - Windows will not activate.  Also if you radically change the hardware in the PC after installing Windows - it may deactivate itself.</p>
+
 <hr>
 
+<p style="font-family: sans-serif; font-size: 28px; margin-top: -10px; margin-bottom: -10px; font-weight: bold;">Internet Information Services (IIS) with PHP and Mysql</p>
+
+<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; font-weight: bold;">NOTE: This section is not suitable for those who are not very techy!  But if you want to host a website from your home PC like I do - why not give it a try?</p>
+
+<center>
+<a href="https://jaseman125.github.io/software/images/ionos-screenshot.png" target="_new"><img src="https://jaseman125.github.io/software/images/ionos-screenshot.png" width="100%"></a>
+<a href="https://jaseman125.github.io/software/images/iis-manager-screenshot.png" target="_new"><img src="https://jaseman125.github.io/software/images/iis-manager-screenshot.png" width="100%"></a>
+<a href="https://jaseman125.github.io/software/images/port-forwarding-screenshot.png" target="_new"><img src="https://jaseman125.github.io/software/images/port-forwarding-screenshot.png" width="100%"></a>
+</center>
+
+<p style="font-family: sans-serif; font-size: 14px; margin-left: 6px; text-align: left;">I purchased the JASEMAN.COM and JASEMAN.CO.UK domain names through IONOS (Formally known as 1&1).  This website is hosted on my home PC.  I installed the 'Internet Information Services' feature of Windows 11 Pro (You can find it in Control Panel > Programs and Features > Turn Windows features on or off) and then I integrated PHP and Mysql into it to add some additional features (Installing PHP and Mysql into IIS is quite complicated - I've added some notes in the install folders below for anyone who is interested).  I also use jquery.js and jssor.slider-28.0.0.min.js javascripts to add some enhancement to my HTML pages.  I only have a basic knowledge of writing HTML code and I just use notepad to edit my webpages.
+<br><br>
+In order to host a website from your house - you first need to find out your public IP address.  You will also need to know the private IP address of your computer that has IIS installed on it, and know how to access the webpage for your home internet router/modem - it will be the IP address of your 'default gateway' which you can get from the command prompt by typing IPCONFIG.
+<br><br>
+Once you have IIS setup and have made a website, you will need to go into the advanced settings of your router/modem and add port forwarding for port 80 - pointing it to the private IP address of the PC where IIS is installed.
+<br><br>
+I login to the IONOS website and set the forwarding destination for my domains to my public IP address.  As I don't have a static IP address with my BT Infinity broadband package, my public IP address changes now and then.  Every time this happens, I have to log into IONOS and update the destination IP.  It's a minor annoyance but static IP's are expensive, and it's not super-critical if my website goes off for a few hours now and then.</p>
+<hr>
+    
 </td>
 
 
@@ -344,34 +364,6 @@ After running - Untick the option to install updates.</p>
 </tr>
 </table>
 
-
-
-<table>
-<tr>
-<td>
-<p style="font-family: sans-serif; font-size: 28px; margin-top: -10px; margin-bottom: -10px; font-weight: bold;">Internet Information Services (IIS) with PHP and Mysql</p>
-
-<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; font-weight: bold;">NOTE: This section is not suitable for those who are not very techy!  But if you want to host a website from your home PC like I do - why not give it a try?</p>
-
-<center>
-<a href="https://jaseman125.github.io/software/images/ionos-screenshot.png" target="_new"><img src="https://jaseman125.github.io/software/images/ionos-screenshot.png" height="180"></a>
-<a href="https://jaseman125.github.io/software/images/iis-manager-screenshot.png" target="_new"><img src="https://jaseman125.github.io/software/images/iis-manager-screenshot.png" height="180"></a>
-<a href="https://jaseman125.github.io/software/images/port-forwarding-screenshot.png" target="_new"><img src="https://jaseman125.github.io/software/images/port-forwarding-screenshot.png" height="180"></a>
-</center>
-
-<p style="font-family: sans-serif; font-size: 18px; margin-left: 6px; text-align: left;">I purchased the JASEMAN.COM and JASEMAN.CO.UK domain names through IONOS (Formally known as 1&1).  This website is hosted on my home PC.  I installed the 'Internet Information Services' feature of Windows 11 Pro (You can find it in Control Panel > Programs and Features > Turn Windows features on or off) and then I integrated PHP and Mysql into it to add some additional features (Installing PHP and Mysql into IIS is quite complicated - I've added some notes in the install folders below for anyone who is interested).  I also use jquery.js and jssor.slider-28.0.0.min.js javascripts to add some enhancement to my HTML pages.  I only have a basic knowledge of writing HTML code and I just use notepad to edit my webpages.
-<br><br>
-In order to host a website from your house - you first need to find out your public IP address.  You will also need to know the private IP address of your computer that has IIS installed on it, and know how to access the webpage for your home internet router/modem - it will be the IP address of your 'default gateway' which you can get from the command prompt by typing IPCONFIG.
-<br><br>
-Once you have IIS setup and have made a website, you will need to go into the advanced settings of your router/modem and add port forwarding for port 80 - pointing it to the private IP address of the PC where IIS is installed.
-<br><br>
-I login to the IONOS website and set the forwarding destination for my domains to my public IP address.  As I don't have a static IP address with my BT Infinity broadband package, my public IP address changes now and then.  Every time this happens, I have to log into IONOS and update the destination IP.  It's a minor annoyance but static IP's are expensive, and it's not super-critical if my website goes off for a few hours now and then.</p>
-<hr>
-</td>
-</tr>
-</table>
-
-
 </td>
 
 
@@ -494,10 +486,6 @@ As with your primary copy - the backups will be bitlocker password protected, so
     
 <hr>
 
-
-<img src="https://jaseman125.github.io/img/under-construction.png" width="100%">
-
-<p style="font-family: sans-serif; font-weight: bold; font-size: 46px;">YOU CAN SEE THE OLD VERSION OF THIS PAGE <a href="http://109.180.239.72/software.php" target="_new">HERE</a></p>
 </td>
 </tr>
 </table>
