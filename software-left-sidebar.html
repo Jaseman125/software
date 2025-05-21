@@ -4,37 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JASEMAN.COM Software Left Sidebar</title>
+    <style>
+        #leftrightcontainer {
+            width: 98%;
+            margin: auto;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        #counter {
+            font-size: 20px;
+            font-weight: bold;
 
-<style>
-        .transparent-image {
-            opacity: 0.2; /* Adjust this value between 0 (completely transparent) and 1 (fully opaque) */
-        }
-
-        #specific-image-container {
-            position: relative;
-            width: 100%;
-        }
-        #specific-image {
-            display: block;
-            width: 100%;
-            height: auto;<iframe width="560" height="315" src="https://www.youtube.com/embed/vlzOb4OLj94?si=3fkmX-zypTpsbh3W&amp;start=33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        }
-        #specific-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            white-space: nowrap;
-            color: black;
-
-        }
+	#content {
+	padding: 0;
+    	margin: 0;
+    	font-size: 20px;
+    	width: 100%;
+	white-space: pre-line;
+    	border: none;
+    	outline: none;
+    	background: transparent;
+    	line-height: 1.0; /* Adjust as needed */
+	display: block; /* Ensures full-width usage */
+}
+	    
     </style>
-
 </head>
+<body>
 
-<body style="margin: 0; padding: 0; border: 0;">
+<div id="leftrightcontainer">
+    <div class="buttons">
+        <button onclick="prevPage()">⬅️ Prev</button>
+        <span id="counter">0</span>
+        <button onclick="nextPage()">Next ➡️</button>
+    </div>
+<div id="content">
+THIS DIV IS NECESSARY - DO NOT DELETE IT!
+    </div>
+</div>
 
-<iframe width="100%" height="210" src="https://www.youtube.com/embed/Uh9643c2P6k?si=CGOZWLJGBsBtVwvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<script>
+    let pages = [
+
+`
+<hr>
+<img src='https://jaseman125.github.io/img/under-construction.png' width='50%'><br>
+<center><p style='font-family: sans-serif; font-weight: bold; font-size: 32px; margin-top: -0px; margin-bottom: 16px;'>THIS AREA IS NOT YET READY</p></center>
+<center><p style='font-family: sans-serif; font-weight: bold; font-size: 22px; margin-top: -0px; margin-bottom: 16px;'>COME BACK SOON</p></center>
+<hr>
+
+<!Windows 11 Advert for Sidebar>
+<iframe width='100%' height='210' src='https://www.youtube.com/embed/Uh9643c2P6k?si=CGOZWLJGBsBtVwvw' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>
+
+<hr>
+
+<center><p style='font-family: sans-serif; font-weight: bold; font-size: 18px; margin-top: -0px; margin-bottom: 16px;'>USE THE LEFT AND RIGHT ARROWS ABOVE TO BROWSE THE SOFTWARE PAGES</p></center>
+`,
+
+`Nothing else to see here... yet!`
+
+    ];
+    
+    let currentPage = 0;
+
+    function updateContent() {
+        document.getElementById("content").innerHTML = pages[currentPage];
+        document.getElementById("counter").innerText = currentPage;
+    }
+
+    function nextPage() {
+        if (currentPage < pages.length - 1) {
+            currentPage++;
+            updateContent();
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 0) {
+            currentPage--;
+            updateContent();
+        }
+    }
+
+    updateContent(); // Ensure the initial content is displayed correctly
+</script>
+
 
 </body>
+	
 </html>
