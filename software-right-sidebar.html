@@ -147,10 +147,11 @@ In the area where it says 'Unallocated' right-click and choose 'New Simple Volum
 Click Next> accepting the default size (Maximum).
 <br><br>
 You can assign a drive letter
-<br>(Continue reading to see my standard for drive letters...)
+<br>(Continue reading to see my standard for drive letters...)</p>
 `,
 
 `
+<p style="font-family: sans-serif; font-size: 14px; margin-left: 6px; text-align: left;">
 Quick format it in NTFS file system, giving it a meaningful label.
 <br><br>
 The disk will be mounted to the drive letter you chose.
@@ -179,10 +180,11 @@ You 'should' be prompted to Unlock the drive using the password.
 <br><br>
 If this prompt vanishes, you have to go to Control Panel and into Bitlocker Drive Encryption.
 <br><br>
-From there you should get the option to unlock the drive and the prompt for the password will return.
+From there you should get the option to unlock the drive and the prompt for the password will return.</p>
 `,
 
 `
+<p style="font-family: sans-serif; font-size: 14px; margin-left: 6px; text-align: left;">
 Every time you power off the PC, the VHDX will be unmounted.
 <br><br>
 This is good, because if someone turns on your PC when you are not around - they cannot access your data even if they get past the login.
@@ -226,14 +228,6 @@ Once you have copied all the VHDX files, you can safely remove the external USB 
 <br><br>
 As with your primary copy - the backups will be bitlocker password protected, so you don't have to worry about your backups getting into the wrong hands.  You do have to worry about forgetting the password!
 </p>
-`,
-
-`
-<hr>
-<img src='https://jaseman125.github.io/img/under-construction.png' width='50%'><br>
-<center><p style='font-family: sans-serif; font-weight: bold; font-size: 32px; margin-top: -0px; margin-bottom: 16px;'>THIS AREA IS NOT COMPLETED YET</p></center>
-<center><p style='font-family: sans-serif; font-weight: bold; font-size: 22px; margin-top: -0px; margin-bottom: 16px;'>COME BACK SOON</p></center>
-<hr>
 `
 
     ];
@@ -248,6 +242,7 @@ As with your primary copy - the backups will be bitlocker password protected, so
     function nextPage() {
         if (currentPage < pages.length - 1) {
             currentPage++;
+
             updateContent();
         }
     }
